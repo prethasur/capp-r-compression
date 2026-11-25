@@ -146,6 +146,6 @@ tests/          offline tests
 
 ## Acknowledgements and licence
 
-- Developed by Pretha Sur during PhD research at Deakin University, supported by SmartSat CRC.
+
 - Uses [Ultralytics](https://github.com/ultralytics/ultralytics) (AGPL-3.0), [PyTorch](https://pytorch.org/), [ONNX](https://onnx.ai/), [ONNX Runtime](https://onnxruntime.ai/) and [SciPy](https://scipy.org/).
-- Licence: **not yet declared.**
+
