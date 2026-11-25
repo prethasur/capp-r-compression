@@ -1,0 +1,18 @@
+{
+  "implementation": "torchvision.models.detection.fcos_resnet50_fpn",
+  "repository": "https://github.com/pytorch/vision",
+  "release": "v0.20.1",
+  "commit_sha": "3ac97aa9120137381ed1060f37237e44485ac2aa",
+  "tree_sha": "7de5b56b0a49c5405619c85cf489d2ea925c603b",
+  "license": "BSD-3-Clause",
+  "relevant_files": [
+    {"path": "torchvision/models/detection/fcos.py", "sha256": "dea8b8e029d4bde23b5b752eeeedfd7e0ec7e7ed894f50bdedd1207523912e88"},
+    {"path": "torchvision/models/detection/backbone_utils.py", "sha256": "041295c42c8063d43c25838b437a006d62717239f91c06cf7807036fee49a150"},
+    {"path": "torchvision/models/resnet.py", "sha256": "01759697b5e5912429502b2ff2509a59e0ee61aabe2b238b5e605ed11f2bbf9f"},
+    {"path": "LICENSE", "sha256": "c06363f9d33627dc5173b13522444cc85fbb4739f63e16d4587d5c0a165b5b1e"}
+  ],
+  "cluster_torch": "2.5.1+cu121",
+  "cluster_torchvision": "0.20.1+cu121",
+  "HRSID_TEST_FILES_PRESENT_ON_CLUSTER": false,
+  "HRSID_TEST_METRIC_ACCESS": "CLOSED_AFTER_FINAL_EVALUATION"
+}

@@ -1,0 +1,17 @@
+{
+  "status": "FCOS_WIDTH_SPEC_FROZEN",
+  "tier": "B",
+  "family": "single_global_width",
+  "width_per_group": 42,
+  "parameters": 22449482,
+  "target_capp_parameters": 22352998,
+  "mismatch_fraction": 0.004316378500995705,
+  "architecture_hash": "0e9fdd568bec49bf4b81e695985c383b9d45ac7b9f8b684e7136b8953b8a9bf9",
+  "rounding_rule": "positive integer ResNet width_per_group; fixed 256-channel FPN/head remains GroupNorm-compatible",
+  "selection_evidence": "parameter count only",
+  "validation_metric_used": false,
+  "hardware_metric_used": false,
+  "HRSID_TEST_METRIC_ACCESS": "CLOSED_AFTER_FINAL_EVALUATION",
+  "HRSID_TEST_FILES_PRESENT_ON_CLUSTER": false,
+  "HARDWARE_AWARE_CAPP_STARTED": false
+}

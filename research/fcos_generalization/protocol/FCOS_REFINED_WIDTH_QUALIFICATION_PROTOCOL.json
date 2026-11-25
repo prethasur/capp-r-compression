@@ -1,0 +1,29 @@
+{
+  "status": "FCOS_REFINED_WIDTH_QUALIFICATION_PROTOCOL_FROZEN",
+  "reason": "The original multiples-of-eight global-width grid left Width-A outside the prospectively required five-percent footprint tolerance.",
+  "selection_evidence": "physical dense parameter count only",
+  "global_width_search": {
+    "family": "ResNet-50 global width_per_group with fixed 256-channel FPN and coupled FCOS towers",
+    "integer_candidates_inclusive": [1, 64],
+    "tie_break": "minimum absolute parameter mismatch, then smaller width_per_group",
+    "preferred_mismatch_fraction": 0.02,
+    "maximum_mismatch_fraction": 0.05,
+    "rounding": "torchvision ResNet bottleneck conventional int(planes * width_per_group / 64); no artificial multiple-of-eight or multiple-of-32 rounding"
+  },
+  "two_factor_fallback": {
+    "allowed_only_if_global_width_fails_five_percent_gate": true,
+    "alpha_backbone": "positive integer width_per_group candidates 1 through 64",
+    "alpha_fpn_head": "single common FPN/classification-tower/regression-tower width from 32 through 256 in steps of 32",
+    "group_norm_constraint": "common FPN/head width divisible by 32",
+    "selection": "minimum absolute parameter mismatch only; same family rematched for B and A",
+    "per_layer_or_stage_search": false
+  },
+  "validation_metric_used": false,
+  "loss_metric_used": false,
+  "hardware_metric_used": false,
+  "HRSID_TEST_FINAL_EVALUATION_COMPLETE": true,
+  "HRSID_TEST_METRIC_ACCESS": "CLOSED_AFTER_FINAL_EVALUATION",
+  "HRSID_TEST_POST_EVALUATION_TUNING_ALLOWED": false,
+  "HRSID_TEST_FILES_PRESENT_ON_CLUSTER": false,
+  "HARDWARE_AWARE_CAPP_STARTED": false
+}

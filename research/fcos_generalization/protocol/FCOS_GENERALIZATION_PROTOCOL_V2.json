@@ -1,0 +1,199 @@
+{
+  "HARDWARE_AWARE_CAPP_STARTED": false,
+  "HRSID_TEST_FILES_PRESENT_ON_CLUSTER": false,
+  "HRSID_TEST_FINAL_EVALUATION_COMPLETE": true,
+  "HRSID_TEST_METRIC_ACCESS": "CLOSED_AFTER_FINAL_EVALUATION",
+  "HRSID_TEST_POST_EVALUATION_TUNING_ALLOWED": false,
+  "adaptation": {
+    "commit_file_sha256": "013b11e783d00d048f5a307e6158f5511e1c0f7af85cc63aac03fd47d43b37d3",
+    "git_commit": "460fca620f0261f498423b2bb50dce9ea0b801b9",
+    "implementation_sha256": {
+      "FCOS_REFINED_WIDTH_QUALIFICATION_PROTOCOL.json": "3c44c0679b47d3fa351fc31b5bf32f0bbfd2804cecafc4f2dbe41b0fd54aaf46",
+      "evaluate_fcos_validation.py": "0006324ecbe7b80aa083cb47b1fb0b285cbc58c2360f30cd483de64518d13bff",
+      "fcos_models.py": "74d5b2a88406b83a9ff418cf0862e2819a2a7d275e8a8dd015fa2d30c744572f",
+      "finalize_fcos_generalization.py": "7395ffceb44852bcdea0da97758e1835e0d017b519fa13379041257535a9ad0d",
+      "freeze_fcos_protocol.py": "faac4b58662dcd839bc1c2a0b467f31b0a1e34819653573c49d15d8d3aac1478",
+      "qualify_fcos_r50_fpn.py": "119270d14e548e469b823c644926862e114c0e835d8bb78147f4a7efe0019e05",
+      "train_fcos_generalization.py": "714fa8d75322e7dec0649f2874e4fad77708486b3d5197cd049e0917106f48b2"
+    },
+    "refinement_protocol_sha256": "3c44c0679b47d3fa351fc31b5bf32f0bbfd2804cecafc4f2dbe41b0fd54aaf46"
+  },
+  "architecture": {
+    "capp": {
+      "A": {
+        "architecture_hash": "fbed9a55e6b4575219462512216e9ca495fbac535df6c8a3346cc187bdff0c8f",
+        "parameters": 17760166,
+        "structure": [
+          "backbone.body.layer1.2.conv2",
+          "backbone.body.layer2.1.conv2",
+          "backbone.body.layer2.2.conv2",
+          "backbone.body.layer2.3.conv2",
+          "backbone.body.layer4.0.conv2",
+          "backbone.body.layer4.1.conv2",
+          "backbone.body.layer4.2.conv2",
+          "backbone.fpn.layer_blocks.0.0",
+          "backbone.fpn.layer_blocks.1.0",
+          "backbone.fpn.layer_blocks.2.0",
+          "backbone.fpn.extra_blocks.p6",
+          "backbone.fpn.extra_blocks.p7",
+          "head.classification_head.conv.0",
+          "head.classification_head.conv.3",
+          "head.classification_head.conv.6",
+          "head.classification_head.conv.9",
+          "head.regression_head.conv.0",
+          "head.regression_head.conv.3",
+          "head.regression_head.conv.6",
+          "head.regression_head.conv.9"
+        ]
+      },
+      "B": {
+        "architecture_hash": "2f3044ce144873ac190188b7cf0b7f8c9d16c9c0286edbdd4bbc85e7d04510e6",
+        "parameters": 22352998,
+        "structure": [
+          "backbone.body.layer1.2.conv2",
+          "backbone.body.layer2.2.conv2",
+          "backbone.body.layer2.3.conv2",
+          "backbone.body.layer3.2.conv2",
+          "backbone.body.layer3.3.conv2",
+          "backbone.body.layer3.4.conv2",
+          "backbone.body.layer3.5.conv2",
+          "backbone.fpn.layer_blocks.0.0",
+          "backbone.fpn.layer_blocks.1.0",
+          "backbone.fpn.layer_blocks.2.0",
+          "backbone.fpn.extra_blocks.p6",
+          "backbone.fpn.extra_blocks.p7",
+          "head.classification_head.conv.0",
+          "head.classification_head.conv.3",
+          "head.classification_head.conv.6",
+          "head.classification_head.conv.9",
+          "head.regression_head.conv.0",
+          "head.regression_head.conv.3",
+          "head.regression_head.conv.6",
+          "head.regression_head.conv.9"
+        ]
+      }
+    },
+    "parent": {
+      "architecture_hash": "9daa070b1d25ad67824b1abaacd3287de143506ab92f7609a5a7e7d00708ccb0",
+      "input_size": [
+        640,
+        640
+      ],
+      "num_foreground_classes": 1,
+      "parameters": 32115270
+    },
+    "two_factor_fallback_used": false,
+    "width": {
+      "A": {
+        "mismatch_to_capp": 0.0038900537303536466,
+        "parameters": 17691078,
+        "spec_sha256": "5372bc8e399a5b07f2aab5b2a4915df15344fddba475ba973b5b30011702bf19",
+        "width_per_group": 28
+      },
+      "B": {
+        "mismatch_to_capp": 0.004316378500995705,
+        "parameters": 22449482,
+        "spec_sha256": "8c8c118aaa91bf23318c698087f93b95822c171b297366ab8c7d47a50ded4bf6",
+        "width_per_group": 42
+      }
+    },
+    "width_family": "single global ResNet width_per_group; fixed 256-channel FPN and coupled FCOS towers"
+  },
+  "canonical_source": {
+    "audit_sha256": "e17104eb8925f122771b381d1a9b969204af4650f7e5e158681fbad4137cbc96",
+    "commit": "3ac97aa9120137381ed1060f37237e44485ac2aa",
+    "repository": "https://github.com/pytorch/vision",
+    "version": "0.20.1"
+  },
+  "created_utc": "2026-09-06T03:15:37.923865+00:00",
+  "data": {
+    "official_validation_images": 841,
+    "train_manifest": "<experiment_root>/manifests/hrsid_official_train.json",
+    "train_manifest_sha256": "98e6959ae7fd9bb7be50848a8e1e1a8f1f7acaf01f34097af467d2e44a864c04",
+    "validation_manifest": "<experiment_root>/manifests/hrsid_official_val.json",
+    "validation_manifest_sha256": "bf9fc425e9fb17e9f4761d6eb66db6b3023a406afff11475620c82dd9dba273e"
+  },
+  "evaluation": {
+    "detections_per_image": 100,
+    "nms_threshold": 0.6,
+    "primary_metrics": [
+      "AP50:95",
+      "AP50",
+      "AP75"
+    ],
+    "score_threshold": 0.001,
+    "selection_after_training": false
+  },
+  "hrsid_test_exclusion": "The HRSID test split is never accessed, copied, enumerated, or evaluated. Only the frozen 841-image official validation split is used, and only after checkpoint/architecture identities are frozen.",
+  "initialization": {
+    "checkpoint": "<experiment_root>/artifacts/fcos_generalization/pretrained/fcos_resnet50_fpn_coco-99b0c9b7.pth",
+    "rule": "for each seed build one parent state, load every exact-name/exact-shape COCO tensor, then transfer every exact-name/exact-shape parent tensor to CAPP/Width; unmatched compressed tensors use deterministic torchvision initialization",
+    "sha256": "99b0c9b7cfb1527d782db86b91d207f00547c792fb4103fc612b651d0a07b9e7",
+    "weights_used_for_architecture_selection": false
+  },
+  "model_identities": {
+    "architecture_search_allowed": false,
+    "capp_A": {
+      "parameters": 17760166
+    },
+    "capp_B": {
+      "parameters": 22352998
+    },
+    "parent": {
+      "parameters": 32115270
+    },
+    "width_A": {
+      "mismatch_vs_capp_A": 0.00389,
+      "parameters": 17691078
+    },
+    "width_B": {
+      "mismatch_vs_capp_B": 0.00432,
+      "parameters": 22449482
+    }
+  },
+  "official_validation_used_for_protocol": false,
+  "protocol": "FCOS_GENERALIZATION_PROTOCOL_V2",
+  "qualification_sha256": "952c5c1232785d727d0c32ecbae160c27c60d61ba6aec394f567942c63372bfc",
+  "status": "FCOS_GENERALIZATION_PROTOCOL_FROZEN",
+  "three_seeds": [
+    0,
+    1,
+    2
+  ],
+  "training": {
+    "amp": false,
+    "augmentation": "random horizontal flip p=0.5 only",
+    "batch_per_gpu": 4,
+    "effective_batch": 16,
+    "epochs": 50,
+    "gradient_accumulation": 4,
+    "image_size": 640,
+    "learning_rate": 0.01,
+    "momentum": 0.9,
+    "optimizer": "SGD",
+    "scheduler": "MultiStepLR milestones [35,45], gamma 0.1",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "training_validation": "disabled",
+    "weight_decay": 0.0001
+  },
+  "v1_dataset_compatibility_patch_sha256": "9b904e610b638cf572d3967ee3af9b74d51db8fdc32e9d5da2eb77f186925c84",
+  "v1_execution_freeze_sha256": "d5b3d54210053a9d03a4d3f12a1b7e660de878aefa083e73a558319133df1801",
+  "v1_protocol_freeze_sha256": "737120949229fb3f2a300a475484dd1286b6afbc2e35c8b5307784d542ce40de",
+  "v1_train_code_discrepancy_note": "The V1 protocol-freeze manifest recorded train_fcos_generalization.py as 714fa8d75322e7dec0649f2874e4fad77708486b3d5197cd049e0917106f48b2; the code that actually executed the V1 15-state training was the post-boundary-nudge dataset-compatibility version (separately attested via FCOS_DATASET_COMPATIBILITY_PATCH.json and the attempt-2 execution freeze). V2 is derived from that executed V1 code, changing ONLY AMP.",
+  "v1_train_code_executed_sha256": "e4e2ec9e4c3cfec5b76e9f3b66f8c433f096e14c04e6b8e5dcd9d2f771a55810",
+  "v1_train_code_manifest_sha256": "714fa8d75322e7dec0649f2874e4fad77708486b3d5197cd049e0917106f48b2",
+  "v2_change": {
+    "description": "torch.amp.autocast and torch.amp.GradScaler removed; forward/backward/optimizer step run in fp32. No other hyperparameter changed (no LR warmup, no gradient clipping, no LR/optimizer/epoch/width/seed change).",
+    "field": "training.amp",
+    "from": true,
+    "justification": "Reproduced fp16 dynamic-range overflow in head.classification_head.conv.0 (classification tower) under autocast for Width-B seed2, Width-A seed0 and Width-A seed1; the identical computation is finite in fp32 at the same evolved state; matched control Width-A seed2 survived epoch 1. Classified FCOS_WIDTH_AMP_NUMERICAL_INSTABILITY.",
+    "to": false
+  },
+  "v2_smoke_code_sha256": "bd71651c62c7d83738820916aede069f26718599aa1449d91d168bb3a6d21c81",
+  "v2_train_code_sha256": "dc653c8ce340e1faf3f9c2b17a936c7a2b70fdc7342d88434c65a65216164883",
+  "variant": "V2"
+}

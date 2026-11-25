@@ -1,0 +1,19 @@
+{
+  "status": "FCOS_QUALIFICATION_PROTOCOL_FROZEN",
+  "parent": "torchvision FCOS-R50-FPN v0.20.1, weights=None, weights_backbone=None, num_classes=1, min/max size 640",
+  "relative_targets": {
+    "B": "FCOS parent parameters multiplied by 1802835/2590035",
+    "A": "FCOS parent parameters multiplied by 1432019/2590035"
+  },
+  "capp_region_rule": "eligible dense 3x3 Conv2d modules excluding stem and terminal classification/regression/centerness predictors",
+  "capp_primitive": "interface-preserving Ghost-style primary 1x1 plus depthwise 3x3 cheap feature generation, ratio 2",
+  "capp_selection": "parameter-only subset-sum approximation to relative B/A target; deterministic name tie-break",
+  "width_rule": "canonical ResNet-50 width_per_group integer multiples of 8 from 8 through 64; parameter-only closest target",
+  "smoke": "eval forward at 1x3x640x640, standard FCOS boxes/labels/scores contract, save state_dict, reconstruct, reload, repeat forward",
+  "validation_metric_used": false,
+  "hardware_metric_used": false,
+  "long_training_authorized": false,
+  "HARDWARE_AWARE_CAPP_STARTED": false,
+  "HRSID_TEST_FILES_PRESENT_ON_CLUSTER": false,
+  "HRSID_TEST_METRIC_ACCESS": "CLOSED_AFTER_FINAL_EVALUATION"
+}
