@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "capp-r"
+version = "0.1.0"
+description = "Contract-preserving structural replacement for compressing object detectors"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0",
+    "numpy",
+    "scipy",
+]
+
+[project.optional-dependencies]
+yolo = ["ultralytics>=8.3,<8.4", "onnx", "onnxruntime"]
+test = ["pytest"]
+
+[tool.setuptools.packages.find]
+include = ["capp_r*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "normalization": {
+    "method": "within_architecture_unique_value_fractional_rank",
+    "direction": "lower_is_better",
+    "fidelity_metrics": [
+      "normalized_feature_MSE",
+      "feature_cosine_distance",
+      "classification_divergence",
+      "DFL_divergence",
+      "raw_box_divergence",
+      "decoded_box_divergence",
+      "score_divergence"
+    ],
+    "worst_fidelity_statistic": "maximum_normalized_fidelity_rank"
+  },
+  "hard_gates": {
+    "status": "FIT_PASS",
+    "parent_unchanged": true,
+    "candidate_parameters_updated": true,
+    "finite_losses_and_gradients": true,
+    "contract_pass": true,
+    "ONNX_export_pass": true,
+    "ORT_execution_pass": true,
+    "ONNX_numerical_pass": true,
+    "minimum_total_model_parameter_reduction": 0.10,
+    "official_validation_accessed": false,
+    "HRSID_test_accessed": false
+  },
+  "pareto": {
+    "minimize": [
+      "worst_normalized_fidelity_rank",
+      "ONNX_size",
+      "graph_depth",
+      "branch_count",
+      "concat_count"
+    ],
+    "maximize": ["total_model_parameter_reduction"]
+  },
+  "diversity": {
+    "shortlist_max": 10,
+    "recovery_max": 3,
+    "shortlist_max_per_region_topology": 2,
+    "prefer_new_region_topology_for_recovery": true
+  },
+  "tie_breakers": [
+    "worst_normalized_fidelity_rank_ascending",
+    "total_model_parameter_reduction_descending",
+    "ONNX_size_ascending",
+    "graph_depth_ascending",
+    "branch_count_plus_concat_count_ascending",
+    "graph_hash_lexical_ascending"
+  ],
+  "allowed_inputs": [
+    "total_model_parameter_reduction",
+    "ONNX_size",
+    "normalized_feature_MSE",
+    "feature_cosine_distance",
+    "classification_divergence",
+    "DFL_divergence",
+    "raw_box_divergence",
+    "decoded_box_divergence",
+    "score_divergence",
+    "fitting_improvement",
+    "graph_depth",
+    "branch_count",
+    "concat_count",
+    "primitive_composition",
+    "topology_signature",
+    "region_id",
+    "graph_hash"
+  ],
+  "prohibited_inputs": [
+    "official_validation_AP",
+    "HRSID_test_results",
+    "unmeasured_Jetson_metrics",
+    "manual_candidate_exceptions",
+    "architecture_preference"
+  ]
+}
